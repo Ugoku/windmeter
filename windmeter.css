@@ -1,13 +1,14 @@
-body > div, body > div > * {
-	display: -webkit-flex;
-	display: flex;
-}
 body {
-	flex-direction: column;
 	font: 1em/1.5 Arial, sans-serif;
 }
-body > div {
-	flex-direction: row;
+.container {
+	display: flex;
+	flex-direction: row; /* Children are placed horizontally */
+	justify-content: space-around;
+}
+.container > div {
+	display: flex;
+	flex-direction: column;
 	justify-content: space-around;
 }
 #winddirection {
@@ -23,4 +24,18 @@ button {
 }
 button:hover, button:active {
 	background: hsl(230, 77%, 50%);
+}
+
+@media screen and (max-width: 600px) {
+	.container {
+		flex-direction: column;
+	}
+	.container > div {
+		border-bottom: 1px solid #eee;
+		flex-direction: row;
+		margin: 0.5em 0;
+	}
+	button {
+		margin: 0.5em 0;
+	}
 }
