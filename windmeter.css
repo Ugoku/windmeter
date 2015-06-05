@@ -4,7 +4,7 @@ body > div, body > div > * {
 }
 body {
 	flex-direction: column;
-	font: Arial, sans-serif;
+	font: 1em/1.5 Arial, sans-serif;
 }
 body > div {
 	flex-direction: row;
@@ -12,4 +12,15 @@ body > div {
 }
 #winddirection {
 	font-size: 2em;
+}
+button {
+	background: hsl(230, 77%, 35%);
+	border: 0;
+	border-radius: 2px;
+	color: #FFF;
+	padding: 0.5em 1em;
+	transition: background .2s;
+}
+button:hover, button:active {
+	background: hsl(230, 77%, 50%);
 }
