@@ -14,6 +14,8 @@ body {
 #winddirection {
 	font-size: 2em;
 	height: 2em;
+	line-height: 2em;
+	text-align: center;
 	width: 2em;
 }
 button {
