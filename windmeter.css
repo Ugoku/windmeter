@@ -4,6 +4,7 @@ body > div, body > div > * {
 }
 body {
 	flex-direction: column;
+	font: Arial, sans-serif;
 }
 body > div {
 	flex-direction: row;
