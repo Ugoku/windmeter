@@ -13,6 +13,8 @@ body {
 }
 #winddirection {
 	font-size: 2em;
+	height: 2em;
+	width: 2em;
 }
 button {
 	background: hsl(230, 77%, 35%);
