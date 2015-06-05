@@ -1,0 +1,14 @@
+div,meter,output {
+	display: -webkit-flex;
+	display: flex;
+}
+body {
+	flex-direction: column;
+}
+body > div {
+	flex-direction: row;
+	justify-content: space-around;
+}
+#winddirection {
+	font-size: 2em;
+}
