@@ -1,4 +1,4 @@
-div,meter,output {
+body > div, body > div > * {
 	display: -webkit-flex;
 	display: flex;
 }
