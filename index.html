@@ -10,7 +10,7 @@
 	<div>
 		<meter id="windspeed" max="50" value=0></meter>
 		<!--<meter id="winddirection" max="359"></meter>-->
-		<span id="winddirection">&#8681;</span>
+		<span id="winddirection">⇩</span>
 		<meter id="temperature" max="50" min="-50" value=0></meter>
 	</div>
 	<div>
@@ -19,6 +19,7 @@
 		<output id="temperature-txt"></output>
 	</div>
 	<button id="js-stop">Stop</button>
+	<button id="js-fliparrow">Flip arrow</button>
 	<script>
 		var source = new EventSource('stream.php');
 		source.addEventListener('message', function(e) {
@@ -35,6 +36,11 @@
 		}, false);
 		document.getElementById('js-stop').addEventListener('click', function(){
 			source.close();
+		});
+		document.getElementById('js-fliparrow').addEventListener('click', function(){
+			var windDirEl = document.getElementById('winddirection');
+			console.log(windDirEl.innerHTML);
+			windDirEl.innerHTML = (windDirEl.innerHTML == '⇩' ? '⇧' : '⇩');
 		});
 	</script>
 </body>
