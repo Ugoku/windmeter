@@ -2,7 +2,7 @@
 <html>
 <head lang="en">
 	<meta charset="UTF-8">
-	<title></title>
+	<title>Wind meter</title>
 	<style>
 		div,meter,output {
 			display: -webkit-flex;
@@ -14,12 +14,6 @@
 		body > div {
 			flex-direction: row;
 			justify-content: space-around;
-
-			-webkit-flex: 1 0 auto;
-			flex: 1 0 auto;
-		}
-		meter {
-			max-width: 50%;
 		}
 		#winddirection {
 			font-size: 2em;
@@ -28,10 +22,10 @@
 </head>
 <body>
 	<div>
-		<meter id="windspeed" max="50"></meter>
+		<meter id="windspeed" max="50" value=0></meter>
 		<!--<meter id="winddirection" max="359"></meter>-->
 		<span id="winddirection">⇩</span>
-		<meter id="temperature" max="50"></meter>
+		<meter id="temperature" max="50" min="-50" value=0></meter>
 	</div>
 	<div>
 		<output id="windspeed-txt"></output>
